@@ -1,0 +1,138 @@
+@font-face {
+  font-family: BeautifulPeople;
+  src: url('../Font/BeautifulPeople.ttf');
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873));
+    display: flex; 
+  }
+  
+  .inner_header {
+    width: 72%;
+    height: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0 auto;
+  }
+  
+  .logo {
+    height: 100%;
+    display: table;
+    margin-right: 10px;
+    padding: 0;
+  }
+
+  .logo img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .brand span {
+    font-size: 45px;
+    font-weight: 100;
+    font-family: BeautifulPeople, cursive;
+  }
+  
+  .head_nav {
+    float: right;
+    height: 100%;
+  }
+  
+  .head_nav li {
+    float: left;
+    padding: 0px 10px;
+    display: table;
+    height: 100%;
+  }
+  
+  .head_nav li a {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    height: 100%;
+  }
+  
+  .head_nav li:last-child {
+    padding-right: 0;
+  }
+
+  nav {
+    width: 100% !important;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    background-color: #181515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  nav a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 45px;
+  }
+  
+  #nav1 a:hover {
+    position: static;
+    color: #ffffff;
+    background-color: #0b917d;
+    transition: all 0.3s;
+    outline: #0b917d solid 1px;
+    opacity: 1;
+  }
+  
+  .heading{
+    position: absolute;
+    top: 24%;
+    left: 610px;
+    font-size: xx-large;
+    font-weight: 900;
+    color: rgb(177, 115, 45);
+  }
+  
+ 
+
+footer {
+  width: 100%;
+  position: relative; 
+  bottom: 0%;
+  background: linear-gradient(to right, rgb(12, 12, 12), rgb(0, 0, 0));
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.col{
+  padding: 25px;
+  color: #fff;
+}
+
+.col li{
+  list-style:  none;
+  
+}
+
+.col a {
+  color: #fff;
+  
+}
+
+.col a span {
+  font-size: large;
+}
+
