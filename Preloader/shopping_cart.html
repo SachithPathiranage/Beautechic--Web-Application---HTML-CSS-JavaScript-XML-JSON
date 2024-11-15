@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesproduct.css">  
+    <title>Shopping Cart</title>
+</head>
+<body>    
+    <div class="container">
+        <header>
+            <div class="inner_header">
+              <div class="logo">
+                <a href="?"><img src="..\mainPage\Images\website-100.png" alt="logo"></a>
+              </div>
+              <div class="brand">
+                <span>Beautéchic</span>
+              </div>        
+              <ul class="head_nav">
+                <li><a href=""><img src="..\mainPage\Images\user-account-64.png" alt="account"></a></li>
+                <li>
+                  <div class="shopping_cart">
+                    <a href="..\productPage\shopping_cart.html"><img src="..\mainPage\Images\bag-64.png" alt="bag"></a>
+                    <span class="cart_count">0</span>
+                  </div>      
+                </li>                   
+              </ul>                    
+            </div>      
+        </header>  
+    </div>
+
+    <nav>
+        <a href="#">Home<span></span></a> 
+        <a href="#">Gallery<span></span></a> 
+        <a href="#">Products<span></span></a> 
+        <a href="#">Services<span></span></a> 
+        <a href="#">Quiz<span></span></a> 
+        <a href="#">Feedbacks<span></span></a> 
+        <a href="#">About us<span></span></a> 
+    </nav>
+    
+    <section id="cart_section">
+        <h2>Shopping Cart</h2> 
+        <hr>
+    </section>
+    
+    <section id="cart-container">
+    <table class="cart_table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="cart_items">
+
+        </tbody>
+        </table>    
+        </section> 
+        <script src="../productPage/cart.js"></script>       
+</body>
+</html>
