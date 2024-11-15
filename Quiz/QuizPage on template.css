@@ -1,0 +1,315 @@
+@font-face {
+    font-family: BeautifulPeople;
+    src: url('../Font/BeautifulPeople.ttf');
+}
+@font-face {
+    font-family: Fashion;
+    src: url('../Font/Fashion.ttf');
+}
+
+* {
+    text-decoration: none;
+    
+}
+
+body {
+    /*width: 1700px;*/
+    margin: 0;
+    height: 100vh;
+    overflow-y: auto; 
+    overflow-x: auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873)); /* Adjust the opacity of the fade-out effect */
+}
+
+.header1 {
+    height: 130px; 
+    padding: 0%;
+    text-wrap: nowrap;
+}
+
+.header2 {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    height: 120px;
+}
+
+.header3 {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    height: 200px;
+}
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0% auto;
+}
+
+.logo {
+    height: 100%;
+    display: table;
+    margin-right: 10px;
+    padding: 0;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.brand {
+    margin-left: 145px;
+    font-size: 45px;
+    font-weight: 100;
+    font-family: BeautifulPeople, cursive;
+}
+
+.head_nav {
+    float: right;
+    height: 100%;
+}
+
+.head_nav li {
+    float: left;
+    padding: 8px 30px;
+    display: table;
+    height: 100%;
+}
+
+.head_nav li a {
+    vertical-align: middle;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.head_nav li:last-child {
+    padding-right: 0;
+}
+
+.head_nav li a:hover img{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.hover-msg1:hover::before {
+    position: fixed;
+    content: "Log-In / Sign-Up";
+    padding-top: 65px;
+    color: #000;
+    font-weight: 600;
+}
+
+.shopping_cart:hover::before {
+    position: fixed;
+    content: "Shopping Cart";
+    padding-top: 68px;
+    color: #000;
+    font-weight: 600;
+
+}
+
+/* Nav */
+
+nav {
+    width: 100% !important;
+    position:sticky;
+    top: 0;
+    height: 50px;
+    background-color: #181515;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+nav a {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 45px;
+    font-size: 18px;
+}
+
+#nav1 a:hover{
+    position:static;
+    color: #ffffff;
+    background-color: #0b917d;
+    transition: all 0.3s;
+    outline:#0b917d solid 1px ;
+    opacity: 1;
+    
+}
+
+
+#nav1 a:hover::after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0b917d;
+    transition: all 0.3s;
+}
+ 
+section {
+    z-index: 1; 
+}
+
+/* Footer */
+
+footer {
+    position: relative; 
+    bottom: 0;
+    background: linear-gradient(to right, rgb(12, 12, 12), rgb(0, 0, 0));
+    padding: 0 20px;
+}
+
+footer.visible + section {
+    margin-bottom: 100px; 
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.row1{
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.col1{
+    padding: 0%;
+}
+
+.col{
+    padding: 25px;
+    color: #fff;
+}
+
+#header-text1{
+    position: sticky;
+    font-size: 26px;
+    color: #000;
+    width: 100%;
+    padding: 15px;
+    top: 20%;
+    margin-left: 0%;
+    font-family: Fashion;
+}
+
+#header-text2{
+    position: sticky;
+    font-size: 26px;
+    color: #000;
+    width: 100%;
+    padding: 15px;
+    top: 40%;
+    margin-left: 80px;
+}
+
+.col li{
+    list-style:  none;
+}
+
+.col a {
+    color: #fff;
+}
+
+.col a span {
+    font-size: large;
+}
+
+.home-box {
+    font-size: 22px;
+    padding: 40px;
+    opacity: 0.9;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873)); /* Adjust the opacity of the fade-out effect */
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.custom-box {
+    padding: 19px;
+    background-color: #eee0b3;
+    margin: 2%;
+    border-color: #000000;
+    border-radius: 8px;
+}
+
+#para1 {
+    font-size: 19px;
+    padding-bottom: 2%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+    font-size: 20px;
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 50%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 10px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    }
+
+#start:hover::before {
+    content: "Click here to start the quiz";
+    position:absolute;
+    background-color: hsl(0, 0%, 34%);
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover:not([disabled]){
+    background: #00838F;
+    color: #fff;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#parallax-section {
+    height: 150vh; /* Adjust height as needed */
+    background-image: url("Images/istockphoto-1185081305-1024x1024.jpg"); /* Set your background image */
+    background-size:auto;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1; /* Make sure the content is above the background */
+}

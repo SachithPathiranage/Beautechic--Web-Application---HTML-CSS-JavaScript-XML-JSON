@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Peanut Butter;
+    src: url('../Font/Peanut Butter.ttf');
+}
+@font-face {
+    font-family: Just Believe;
+    src: url('../Font/Just Believe.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    transition: background-color 0.5s ease;
+}
+
+.app{
+    background: #e5c9a6;
+    width: 90%;
+    max-width: 700px;
+    height: 580px;
+    margin: 80px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    border: 2px solid #944801;
+    opacity: 0.9;
+
+}
+.text-center{
+    text-align: center;
+    font-size: 80px;
+    font-family: Just Believe;
+}
+.app h1{
+    color:#001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 10px;
+}
+.quiz h2{
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    padding: 0 0 10px 10px;
+}
+.btn{
+    background: #fff;
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+    color: #222;
+    font-weight: 500;
+    font-size: large;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #00838F;
+    color: #fff;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: #00838F;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0px;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+#exit-btn {
+    background: #FF5722; /* Choose your desired background color */
+    color: #fff;
+    font-weight: 500;
+    border: 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 100px;
+    width: 150px;
+    margin-left: 232px;
+}
+
+.correct{
+    background: #9aeabc; 
+}
+
+.incorrect{
+    background: #ff9393;
+}
+#background-video1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    margin-left: 50%;
+}
+#background-video2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+}
