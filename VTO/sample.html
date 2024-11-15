@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sample.css">
+    <title>Virtual-Try On</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <!-- NAME SECTION-->
+            <div class="jumbotron">
+                <div class="container-top" style="text-align:center;">
+                    <div class="row">
+                        <div class="col">
+                            <h1
+                                style="color:#a52a2a; font-size: 50px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 700;">
+                                TRY ON A NEW MAKEUP TODAY!</h1>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="myFace" class="cartoon">
+                                <div class="bg-dream"></div>
+                                <div class="bg"></div>
+                                <div class="neck"></div>
+                                <div class="ear hb ha"></div>
+                                <div class="ear hb ha"></div>
+                                <div class="earring r b"></div>
+                                <div class="earring r b"></div>
+                                <div class="hair-back0"></div>
+                                <div class="hair-back1"></div>
+                                <div class="hair-back2"></div>
+
+                                <div class="hair-back3"></div>
+                                <div class="hair-top31"></div>
+                                <div class="hair-top32"></div>
+                                <div class="hair-top33"></div>
+                                <div class="hair-top34"></div>
+                                <div class="hair-top35"></div>
+                                <div class="hair-top36"></div>
+                                <div class="hair-top37"></div>
+                                <div class="hair-top38"></div>
+                                <div class="hair-top39"></div>
+
+
+
+                                <div class="face hb ha">
+                                    <div id="eyelids1" class="eyelid" onclick="changeEyelids()"></div>
+                                    <div id="eyelids2" class="eyelid" onclick="changeEyelids()"></div>
+                                    <div class="eye r ha hb"></div>
+                                    <div class="eye r ha hb"></div>
+                                </div>
+                                <div class="face">
+                                    <div class="forehead ha hb">
+                                    </div>
+
+                                    <div class="nose r ha"></div>
+                                    <div id="lips1" class="lip-bottom"></div>
+                                    <div class="mouth"></div>
+                                    <div id="eyebrows1" class="eyebrow r"></div>
+                                    <div id="eyebrows2" class="eyebrow r"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modify session reference: https://www.youtube.com/watch?v=DP9-CVgkgDA-->
+
+                <div class="container">
+                    <div class="left">
+                        <h2>Choose Your Hairstyle</h2>
+                        <div>
+                            <button onclick="toggleHairStyle('hair-back0')">Hair Style 1</button>
+                            <button onclick="toggleHairStyle('hair-back2')">Hair Style 2</button>
+                            <button onclick="toggleHairStyle('hair-back3')">Hair Style 3</button>
+                            <button onclick="toggleHairStyle('hair-back1')">Hair Style 4</button>
+                        </div>
+                        <input type="color" id="hairColorPicker">
+                        <button onclick="changeHairColor()">Change Color</button>
+                    </div>
+                    <div class="right">
+                        <!--<h3>Change Your face colors</h3>
+                      <input type="color" id="faceColorPicker">
+                      <button onclick="changeFaceColor()">Change Face Color</button>-->
+                        <!-- Eyebrows -->
+                        <div class="row">
+                            <div class="col">
+                                <div><h2>Refine your looks with our new eyebrows colors!</h2></div>
+                                <input type="color" id="colorInputColor">
+                                <input type="button" id="colorButton" onclick="changeEyebrowColor()"
+                                    value="Click here to new colors on your eyebrows">
+                            </div>
+                        </div>
+                        <!-- Eyelids -->
+                        <div class="row">
+                            <div class="col">
+                                <div><h2>Make your eyes pop with our new colors!</h2></div>
+                                <input type="color" id="colorInputColor1">
+                                <input type="button" id="colorButton1" onclick="changeEyelids()"
+                                    value="Click here to new eyeliner colors">
+                            </div>
+                        </div>
+                        <!-- Lips -->
+                        <div class="row">
+                            <div class="col">
+                                <div><h2>Try our new lipstick color!</h2></div>
+                                <input type="color" id="colorInputColor2">
+                                <input type="button" id="colorButton2" onclick="changeLips()"
+                                    value="Click here to new colors on your lips">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="sample.js"></script>
+</body>
+
+</html>

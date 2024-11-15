@@ -1,0 +1,920 @@
+@font-face {
+    font-family: BeautifulPeople;
+    src: url('../Font/BeautifulPeople.ttf');
+}
+
+html,
+body {
+    background-color: #8fbc8f;
+    font-family: serif;
+    margin: 0;
+    height: 100vh;
+
+}
+
+/* Container Styles */
+.container {
+    overflow-wrap: normal;
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    background-color: #daa659;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.container>div {
+    padding: 30px 60px;
+}
+
+.container-top {
+    white-space: nowrap;
+    position: relative;
+    height: 800px;
+    padding: 5px 5px 5px 5px;
+    background: #ffdead;
+    border-bottom: 1px;
+    border-radius: 40px 40px 40px 40px;
+    min-height: 50px;
+}
+
+.jumbotron {
+    height: 100%;
+    width: 100%;
+}
+
+.jumbotron.container {
+    max-width: 100%;
+}
+
+/* Body Text Styles */
+p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Link Styles */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #45a049;
+}
+
+
+.cartoon {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 90vmin;
+    height: 90vmin;
+    --skin: #955741;
+    --hair: #3a130a;
+    margin-top: 0%
+}
+
+.cartoon div {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.b {
+    border: 1vmin solid;
+}
+
+.r {
+    border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+/****/
+.face {
+    width: 40%;
+    height: 53%;
+    background: var(--skin);
+    border-radius: 100% 100% / 60% 60% 130% 130%;
+    overflow: hidden;
+    transform: translate(-50%, 0);
+    top: 37%;
+    left: 50%;
+}
+
+.face::before,
+.face::after {
+    border-radius: 50%;
+    top: 40%;
+    left: -20%;
+    width: 40%;
+    height: 80%;
+    box-shadow: inset 0vmin 0 3vmin rgba(80, 40, 20, 0.15);
+    transform: rotate(-25deg);
+}
+
+.face::after {
+    transform: scaleX(-1) rotate(-25deg);
+    left: auto;
+    right: -20%;
+}
+
+.face+.face {
+    background: transparent;
+    overflow: visible;
+}
+
+.nose {
+    width: 20%;
+    height: 14%;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    abox-shadow: 0 2vmin 0 -0.75vmin rgba(0, 0, 0, 0.5);
+    background: #692a19;
+}
+
+.nose::after {
+    width: 200%;
+    height: 68%;
+    left: 50%;
+    top: 15%;
+    background: #f007;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+    background: var(--skin);
+    box-shadow: 0 -2vmin var(--skin);
+}
+
+.lip-bottom {
+    width: 41.5%;
+    height: 14%;
+    background: #742c19;
+    border-radius: 0 0 50% 90% / 60% 60% 90% 100%;
+    transform: translate(-50%, -50%) rotate(1deg);
+    top: 74%;
+    left: 49.5%;
+    aclip-path: polygon(0% 40%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.lip {
+    width: 60%;
+    height: 14%;
+    background: var(--skin);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.lip::before {
+    width: 68%;
+    height: 70%;
+    background: #62200c;
+    border-radius: 50% 60% 50% 50%;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, 0) rotate(-3deg);
+}
+
+.lip::after {
+    width: 2vmin;
+    height: 0.76vmin;
+    top: 51%;
+    left: 50%;
+    background: var(--skin);
+    border-radius: 100%;
+    transform: translate(-50%, 0) rotate(5deg);
+}
+
+.eyebrow {
+    width: 39%;
+    height: 20%;
+    color: black;
+    box-shadow: 0 -2.5vmin 0 -0.3vmin, 0vmin -3vmin 0 -0.5vmin var(--skin),
+        -0.5vmin -3vmin 0 -0.75vmin;
+    aclip-path: polygon(0% -100%,
+            50% -100%,
+            15% -8%,
+            90% -100%,
+            100% 100%,
+            0% 100%);
+    top: 20%;
+    left: 57%;
+    transform: rotate(-3deg);
+}
+
+.eyebrow+.eyebrow {
+    height: 19%;
+    left: 3%;
+    transform: scaleX(-1) rotate(-1deg);
+}
+
+.eye {
+    width: 80%;
+    height: 30%;
+    overflow: hidden;
+    top: 12%;
+    left: -16.5%;
+    transform: rotate(4deg);
+    background: var(--skin);
+    z-index: 2;
+}
+
+.eye+.eye {
+    transform: scaleX(-1) rotate(4deg);
+    left: auto;
+    right: -16.5%;
+    z-index: 2;
+}
+
+.eye::after {
+    height: 100%;
+    width: 38%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+.eyelid {
+    z-index: 2;
+    border-radius: 100%;
+    width: 53.5%;
+    height: 27%;
+    background: black;
+    top: 16.5%;
+    left: -2%;
+    aclip-path: polygon(0% 50%,
+            100% 50%,
+            100% 100%,
+            70% 100%,
+            80% 95%,
+            45% 100%,
+            58% 95%,
+            30% 95%,
+            45% 90%,
+            20% 89%,
+            30% 86%,
+            5% 82%,
+            20% 80%,
+            0% 75%);
+}
+
+.eyelid+.eyelid {
+    transform: scaleX(-1);
+    left: auto;
+    z-index: 2;
+    right: -2%;
+}
+
+.forehead {
+    width: 100%;
+    height: 45%;
+    background: var(--skin);
+    top: -15%;
+    border-radius: 100% 100% 0 0 / 120%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
+    overflow: hidden;
+    box-shadow: inset 0vmin 0.5vmin var(--hair);
+    border-top: 0.2vmin solid #3a130a;
+}
+
+.neck {
+    width: 15%;
+    left: 50%;
+    top: 82%;
+    height: 20%;
+    background: var(--skin);
+    transform: translate(-50%, 0);
+}
+
+.ear {
+    width: 10%;
+    height: 25%;
+    border-radius: 100% / 60% 60% 100% 100%;
+    transform: rotate(-10deg);
+    top: 48%;
+    left: 25%;
+}
+
+.ear::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 100% / 60% 60% 100% 100%;
+    background: var(--skin);
+    box-shadow: inset -5vmin 0 3vmin rgba(0, 0, 0, 0.1);
+}
+
+.ear::after {
+    width: 10vmin;
+    height: 18vmin;
+    background: var(--skin);
+    border-radius: 50%;
+    left: -1vmin;
+    z-index: -1;
+}
+
+.ear+.ear {
+    transform: scaleX(-1) rotate(-10deg);
+    left: auto;
+    right: 25%;
+}
+
+.earring {
+    border: 0.5vmin solid gold;
+    width: 5vmin;
+    height: 6vmin;
+    top: 70.5%;
+    left: 29.75%;
+    clip-path: polygon(0% 0%, 50% 50%, 100% 50%, 100% 100%, 0% 100%);
+    transform: rotate(10deg);
+}
+
+.earring+.earring {
+    transform: scaleX(-1) rotate(5deg);
+    left: auto;
+    top: 70%;
+    right: 29.25%;
+}
+
+#colorWrapper {
+    padding: 0px 8px 8px 8px;
+    border: 2px;
+    width: 228px;
+    margin: 0px 0px 20px 0px;
+}
+
+.colorSwatch {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-default {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-default:hover {
+    background-color: #45a049;
+}
+
+/* Input Field Styles */
+input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+
+/* Header Styles */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.hair-back0 {
+    display: none;
+    width: 90%;
+    height: 100%;
+    background: var(--hair);
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%) rotate(4deg);
+    border-radius: 95% / 80% 80% 120% 110%;
+    z-index: -2;
+    box-shadow:
+        inset 2.5vmin -0.5vmin 2vmin #6002,
+        inset -1.5vmin -0.5vmin 2vmin #fff3
+}
+
+.hair-back1 {
+    display: none;
+    width: 90%;
+    height: 70%;
+    background: var(--hair);
+    left: 50%;
+    top: -1%;
+    transform: translateX(-50%) rotate(4deg);
+    border-radius: 95% / 80% 80% 120% 110%;
+    z-index: -2;
+    box-shadow:
+        inset 2.5vmin -0.5vmin 2vmin #6002,
+        inset -1.5vmin -0.5vmin 2vmin #fff3
+}
+
+.hair-back2 {
+    display: none;
+    width: 55%;
+    height: 80%;
+    background: var(--hair);
+    /* Sets the background color of the hair */
+    left: 50%;
+    /* Positions the hair in the center horizontally */
+    top: 20%;
+    /* Positions the hair slightly above the top of the head */
+    transform: translateX(-50%) rotate(-6deg);
+    /* Applies translation and rotation transformations */
+    border-radius: 120% 80% / 120% 110% 95%;
+    /* Sets border radius to create a rounded shape */
+    z-index: -2;
+    /* Sets the stacking order of the hair behind other elements */
+    box-shadow:
+        inset 1vmin -0.5vmin 1vmin rgba(0, 0, 0, 0.1),
+        /* Adds an inset shadow for depth */
+        0 0 10px rgba(0, 0, 0, 0.3);
+    /* Adds an outer shadow for a soft glow */
+}
+
+.hair-back3 {
+    width: 55%;
+    height: 80%;
+    background: var(--hair);
+    /* Sets the background color of the hair */
+    left: 50%;
+    /* Positions the hair in the center horizontally */
+    top: 20%;
+    /* Positions the hair slightly above the top of the head */
+    transform: translateX(-50%) rotate(-6deg);
+    /* Applies translation and rotation transformations */
+    border-radius: 120% 80% / 80% 110% 95%;
+    /* Sets border radius to create a rounded shape */
+    z-index: -2;
+    /* Sets the stacking order of the hair behind other elements */
+    box-shadow:
+        inset 1vmin -0.5vmin 1vmin rgba(0, 0, 0, 0.1),
+        /* Adds an inset shadow for depth */
+        0 0 10px rgba(0, 0, 0, 0.3);
+    /* Adds an outer shadow for a soft glow */
+}
+
+.hair-top31 {
+    width: 30%;
+    height: 20%;
+    background: var(--hair);
+    left: 45%;
+    top: 20%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    border-radius: 120% 80% / 80% 110% 95%
+}
+
+.hair-top32 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 30%;
+    top: 26%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top33 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 27%;
+    top: 33%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top34 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 24%;
+    top: 42%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top35 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 25%;
+    top: 55%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top36 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 30%;
+    top: 70%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top37 {
+    width: 13%;
+    height: 18%;
+    background: var(--hair);
+    left: 68%;
+    top: 30%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top38 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 72%;
+    top: 42%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.hair-top39 {
+    width: 15%;
+    height: 18%;
+    background: var(--hair);
+    left: 72%;
+    top: 63%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 180% 100% / 100% 180% 95%
+}
+
+.mouth {
+    width: 35%;
+    height: 1%;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f004;
+    border-radius: 50%;
+    background:
+        radial-gradient(100% 80% at 50% 100%, #000 45%, #0000 48%) 0 20% / 60% 50% no-repeat,
+        radial-gradient(100% 80% at 50% 100%, #000 45%, #0000 48%) 100% 20% / 60% 50% no-repeat,
+        linear-gradient(#0000 50%, rgb(0, 0, 0) 0)
+}
+
+.hair-back3,
+.hair-top31,
+.hair-top32,
+.hair-top33,
+.hair-top34,
+.hair-top35,
+.hair-top36,
+.hair-top37,
+.hair-top38,
+.hair-top39 {
+    display: none;
+    /* Other styling properties */
+}
+
+/* Style for buttons */
+button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #7bc97f;
+    border: 1px solid #000;
+    /* Darker Green */
+}
+
+/* Style for color picker inputs */
+input[type="button"] {
+    border: none;
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-size: larger;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+input[type="color"] {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #7bc97f;
+    border: 1px solid #000;
+}
+
+input[type="color"]:hover {
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid #000;
+}
+
+
+/* Style for divs containing instructions */
+div {
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    border: 2px solid#000;
+}
+
+.left {
+    flex: 1;
+    padding-right: 20px;
+    /* Adjust as needed */
+}
+
+.right {
+    flex: 1;
+    padding-left: 20px;
+    /* Adjust as needed */
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873));
+    /* Adjust the opacity of the fade-out effect */
+}
+
+.header1 {
+    height: 130px;
+    padding: 0%;
+    text-wrap: nowrap;
+}
+
+.header2 {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    height: 120px;
+}
+
+.header3 {
+    position: relative;
+    color: hsl(0, 0%, 100%);
+    height: 200px;
+}
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% auto;
+}
+
+.logo {
+    height: 100%;
+    display: table;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.brand {
+    margin-left: 145px;
+    font-size: 45px;
+    font-weight: 100;
+    font-family: BeautifulPeople, cursive;
+}
+
+.head_nav {
+    float: right;
+    height: 100%;
+}
+
+.head_nav li {
+    float: left;
+    padding: 8px 30px;
+    display: table;
+    height: 100%;
+}
+
+.head_nav li a {
+    vertical-align: middle;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.head_nav li:last-child {
+    padding-right: 0;
+}
+
+.head_nav li a:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.hover-msg1:hover::before {
+    position: fixed;
+    content: "Log-In / Sign-Up";
+    padding-top: 65px;
+    color: #000;
+    font-weight: 600;
+}
+
+.shopping_cart:hover::before {
+    position: fixed;
+    content: "Shopping Cart";
+    padding-top: 68px;
+    color: #000;
+    font-weight: 600;
+
+}
+
+/* Nav */
+
+nav {
+    width: 100% !important;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    background-color: #181515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+nav a {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 45px;
+    font-size: 18px;
+}
+
+#nav1 a:hover {
+    position: static;
+    color: #ffffff;
+    background-color: #0b917d;
+    transition: all 0.3s;
+    outline: #0b917d solid 1px;
+    opacity: 1;
+
+}
+
+
+#nav1 a:hover::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0b917d;
+    transition: all 0.3s;
+}
+
+section {
+    z-index: 1;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, rgb(12, 12, 12), rgb(0, 0, 0));
+    padding: 10px 20px;
+}
+
+footer.visible+section {
+    margin-bottom: 100px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.row1 {
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.col1 {
+    padding: 0%;
+}
+
+.col {
+    white-space: nowrap;
+}
+
+#header-text1 {
+    position: sticky;
+    font-size: 26px;
+    color: #000;
+    width: 100%;
+    padding: 15px;
+    top: 20%;
+    margin-left: 0%;
+    font-family: Fashion;
+}
+
+#header-text2 {
+    position: sticky;
+    font-size: 26px;
+    color: #000;
+    width: 100%;
+    padding: 15px;
+    top: 40%;
+    margin-left: 80px;
+}
+
+.col li {
+    list-style: none;
+}
+
+.col a {
+    color: #fff;
+}
+
+.col a span {
+    font-size: large;
+}
