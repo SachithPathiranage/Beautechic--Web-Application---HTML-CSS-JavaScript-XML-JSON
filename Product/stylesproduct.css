@@ -1,0 +1,517 @@
+@font-face {
+  font-family: BeautifulPeople;
+  src: url('../Font/BeautifulPeople.ttf');
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /*background: linear-gradient(to bottom, #F2E9de, #A87363);*/
+  background-color:#dab9b2 ;
+  /*background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873)); /* Adjust the opacity of the fade-out effect */
+}
+
+
+
+
+/* header */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873)); /* Adjust the opacity of the fade-out effect */
+  
+}
+
+.inner_header {
+  width: 1000px;
+  height: 100%;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin: 0 auto;
+}
+
+.logo {
+  height: 100%;
+  display: table;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.logo img{
+  width: 100px;
+  height: 100px;
+}
+
+.brand {
+  margin-left: 145px;
+  font-size: 45px;
+  font-weight: 100;
+  font-family: BeautifulPeople, cursive;
+}
+
+.head_nav {
+  float: right;
+  height: 100%;
+}
+
+.head_nav li {
+  float: left;
+  padding: 8px 30px;
+  display: table;
+  height: 100%;
+}
+
+.head_nav li a {
+  vertical-align: middle;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.head_nav li a:hover img{
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.hover-msg1:hover::before {
+  position: fixed;
+  content: "Log-In / Sign-Up";
+  padding-top: 65px;
+  color: #000;
+  font-weight: 600;
+}
+
+.shopping_cart:hover::before {
+  position: fixed;
+  content: "Shopping Cart";
+  padding-top: 68px;
+  color: #000;
+  font-weight: 600;
+
+}
+/* shopping cart */
+.head_nav li:last-child {
+  padding-right: 0;
+}
+
+
+.head_nav li:last-child .shopping_cart {
+  position: relative; 
+}
+
+.head_nav li:last-child .shopping_cart .cart_count {
+  position: absolute; 
+  top: 10px;
+  right: 0px; 
+  background-color: red;
+  display: flex;
+  width: 20px;
+  height: 25px;  
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* Nav */
+
+nav {
+  width: 100% !important;
+  position:sticky;
+  top: 0;
+  height: 50px;
+  background-color: #181515;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+nav a {
+  display: inline-block;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 45px;
+  font-size: 18px;
+}
+
+#nav1 a:hover{
+  position:static;
+  color: #ffffff;
+  background-color: #0b917d;
+  transition: all 0.3s;
+  outline:#0b917d solid 1px ;
+  opacity: 1;
+  
+}
+
+
+#nav1 a:hover::after{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0b917d;
+  transition: all 0.3s;
+}
+
+section {
+  z-index: 1; 
+}
+
+/* Body */
+.product-title-background {
+  background-image: url('../Images/Product_img/makeup-powder-foundation-brushes.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  z-index: -1;
+}
+
+.product-title {
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #fffefe; 
+}
+
+.product-title h1 {
+  font-size: 5em;
+   
+}
+.scale-up-hor-center {
+  z-index: -1;
+	-webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.main-product.text {
+  text-align: center;
+  font-weight: 500px;
+}
+
+.sub-product.text{
+  text-align: center;
+  font-weight: 200px;
+}
+
+.makeup {
+  text-align: left;
+}
+
+.product.thumbnails {
+  width: 200px;
+  display: inline-block;
+  margin-right: 20;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Adjust to start from left */
+  overflow-x: hidden; /* Hide overflow */
+  margin: 0 auto; /* Center the row */
+  padding: 20px 0; /* Add padding */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  width: 1200px; /* Adjust the width to accommodate three thumbnail wrappers */
+}
+
+.thumbnail-wrapper {
+  margin: 0 20px; /* Adjust margin for three cards */
+  width: 300px; /* Keep the width of each thumbnail wrapper */
+  height: 650px; /* Set minimum height to ensure consistency */
+  background-color: #fff4f3;
+  padding: 30px; 
+  border-radius: 20px;
+  box-shadow: 0 10px 10px #757676;
+  flex: 0 0 auto; /* Prevent shrinking */
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Arrange items vertically */
+}
+
+.thumbnail-wrapper .product.thumbnails {
+  display: block; 
+  margin: 0 auto; 
+  width: 250px;
+  height: 330px;
+  border-radius: 20px;
+}
+
+.product-row .thumbnail-wrapper .add_to_cart button{
+  background-color: black;
+  color: #eee;
+  border: none;
+  padding: 5px 10px;
+  margin-top: auto;
+  border-radius: 20px;
+  margin-left: 25%;
+  cursor: pointer;
+  justify-content: center;
+  width: 50%;  
+}
+
+.product-row .thumbnail-wrapper .add_to_cart button:hover{
+  font-size: large;  
+}
+
+.thumbnail-title {
+  margin-top: auto; /* Push to the top */
+  width: 100%; /* Ensure the product name spans the entire width */
+}
+
+.thumbnail-title h4 {
+  height: 40px; /* Fixed height for product title */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  margin-top: 10px; /* Adjust the top margin as needed */
+  padding: 10px; /* Add padding to the product name container */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.thumbnail-title .product_description {  
+  height: 60px; /* Fixed height for product description */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  margin-top: 10px; /* Add a small gap between product name and description */
+  padding: 10px; /* Add padding to the description container */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 160px); /* Adjusted to account for the space used by title and description */
+}
+
+.thumbnail-wrapper .details {
+  flex: 1; /* Allow the details section to grow */
+}
+ 
+
+.thumbnails-container{
+  position: relative;
+}
+
+.thumbnails-container i{ 
+  bottom: 50%; 
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  text-align: center;
+  line-height: 50px;
+  position: absolute ;
+  border-radius: 50%;
+  transform: translateY(50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 23) ;
+  cursor: pointer;
+
+}
+
+.thumbnails-container i:first-child {
+  left: 120px;
+}
+
+.thumbnails-container i:last-child  {
+  right: 120px;
+} 
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  z-index: 1; /* Ensure buttons appear above product cards */
+}
+
+/* Position the left arrow on the left side of the container */
+.prev-btn {
+  left: 40px; /* Position the left arrow on the left side of the container */
+  opacity: 0.5; /* Set initial opacity to 0.5 */
+}
+
+
+/* Position the right arrow on the right side of the container */
+.next-btn {
+  right: 40px;
+}
+
+.transparent {
+  opacity: 0.5; /* Set opacity to 0.5 to make it transparent */
+  pointer-events: none; /* Disable pointer events to prevent interaction */
+}
+
+.price-quantity {
+  margin-top: auto; /* Push to the top */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Quantity controls */
+.quantity-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.quantity-controls img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 0 5px; /* Add space between buttons */
+}
+
+.increment_img {
+  margin-right: 5px;
+}
+
+.decrement_img {
+  margin-left: 5px;
+}
+
+
+/* Footer */
+
+footer {
+  width: 100%;
+  position: relative; 
+  bottom: 0;
+  background: linear-gradient(to right, rgb(12, 12, 12), rgb(0, 0, 0));
+  padding: 0 20px;
+}
+
+footer.visible + section {
+  margin-bottom: 100px; 
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.col{
+  padding: 25px;
+  color: #fff;
+}
+
+.col li{
+  list-style:  none;
+}
+
+.col a {
+  color: #fff;
+}
+
+.col a span {
+  font-size: large;
+}
+
+
+/* scale-up-hor-center*/
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+/*text-pop-up-top*/
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Style for scroll-to-top button */
+.scroll-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.scroll-to-top-btn img {
+  width: 20px; /* Adjust image size as needed */
+  height: 15px;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #0056b3;
+}
