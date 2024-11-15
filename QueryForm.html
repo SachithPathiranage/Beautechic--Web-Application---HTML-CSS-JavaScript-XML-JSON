@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="QuerryFormCSS.css">
+    </style>
+</head>
+
+<body>
+
+    <h2>"Got Questions? Let's Chat!"</h2>
+    <h3>" Send your Queries..."</h3>
+
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name...">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email...">
+
+        <label for="queryTheme">Query Theme:</label>
+        <select id="queryTheme" name="queryTheme">
+            <option value="">Select Theme</option>
+            <option value="General">General</option>
+            <option value="General"> Beauty Tips and Advice</option>
+            <option value="Billing">Billing</option>
+            <option value="Billing">Product Inquiries</option>
+            <option value="Billing">Order Assistance</option>
+            <option value="Billing">Membership and Rewards</option>
+            <option value="Billing"> Promotions and Discounts</option>
+            <option value="Billing"> Shipping and Returns</option>
+            <option value="Technical">Technical</option>
+            <option value="Technical">Virtual Try-On Support</option>
+
+        </select>
+
+        <label for="queryDetails">Query Details:</label>
+        <textarea id="queryDetails" name="queryDetails" rows="4" required
+            placeholder="Write your thoughts..."></textarea>
+
+        <button type="reset">Reset</button>
+        <button type="submit" onclick="validateForm()">Submit Query</button>
+    </form>
+    <div class="link">
+    <a href="PageEditor_Std2.html">Link to Page Editor</a></div>
+</body>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var queryTheme = document.getElementById("queryTheme").value;
+        var queryDetails = document.getElementById("queryDetails").value;
+
+        if (name.trim() == '' || email.trim() == '' || queryTheme.trim() == '' || queryDetails.trim() == '') {
+            alert("Please fill in all required fields.");
+            return false;
+        }
+        // Regular expression for basic email validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Check if email follows a valid format
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // Additional validation logic if needed
+
+        // Display summary in a popup window
+        var summary = "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Subject: " + queryTheme + "\n" +
+            "Details: " + queryDetails;
+
+        // Open popup window with summary
+        window.open("", "Query Summary", "width=400,height=300");
+        var popupWindow = window.open("", "Query Summary", "width=400,height=300");
+        popupWindow.document.write("<pre>" + summary + "</pre>");
+        popupWindow.document.close();
+
+        return true;
+    }
+</script>
+
+
+</html>

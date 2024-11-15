@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppping Cart</title>
+
+    <link rel="stylesheet" href="Product/Shopping Cart on template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="inner_header">
+            <div class="logo">
+                <a href="mainPage.html"><img src="Images/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="brand">
+                <Span>Beautéchic</Span>
+            </div>
+
+            <ul class="head_nav">
+                <li><a href="SignUp_Login.html" class="hover-msg1"><img src="Images/Common/user-account-64.png"
+                            alt="account"></a></li>
+                <li>
+                    <div class="shopping_cart">
+                        <a href="Shopping Cart.html"><img src="Images/Common/bag-64.png" alt="bag"></a>
+                        <span id="cart_count" class="cart_count">0</span>
+
+                    </div> </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <nav id="nav1">
+        <a href="mainPage.html">Home<span></span></a>
+        <a href="Gallery.html">Gallery<span></span></a>
+        <a href="product.html">Products<span></span></a>
+        <a href="VTO.html">Services<span></span></a>
+        <a href="QuizPage on template.html">Quiz<span></span></a>
+        <a href="Review/Feedback.html">Feedback<span></span></a>
+        <a href="AboutUs.html">About us<span></span></a>
+    </nav>
+
+    <section>
+        <!-- <div id="parallax-section">
+            <div class="parallax-container">
+                <script>window.addEventListener('scroll', function () {
+                        let offset = window.pageYOffset;
+                        document.querySelector('#parallax-section').style.backgroundPositionY = offset * 0.7 + 'px'; // Adjust the speed of parallax
+                    });
+
+                    window.addEventListener('load', function () {
+                        let parallaxImage = document.querySelector('#parallax-image');
+                        parallaxImage.style.height = window.innerHeight + 'px';
+                    });
+                </script> -->
+        <header class="header1">
+            <div class="row1">
+                <div class="col1">
+                    <div class="scale-up-hor-center">
+                        <div id="header-text"><b>Shopping Cart</b></div>
+                    </div>
+                    <div class="header2"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="custom-box">
+            <!-- ===================== -->
+            <!---     cart details    --->
+            <!-- ===================== -->
+            <div id="label" class="text-center">
+                <section id="cart" class="section-p1">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td>Number</td>
+                                <td>Remove</td>
+                                <td>Image</td>
+                                <td>Product</td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                                <td>Subtotal</td>
+                            </tr>
+                        </thead>
+                        <tbody id="shopping-cart">
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+
+
+
+        <!-- ===================== -->
+        <!--     cart add details    -->
+        <!-- ===================== -->
+
+        <section id="cart-add" class="section-p1">
+
+            <div id="subtotal">
+                <div class="custom-box1">
+                    <h2>Cart Totals</h2>
+                    <table>
+                        <tr>
+                            <td class="td1">Cart Subtotal</td>
+                            <td class="td1">Rs.0</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Shipping</td>
+                            <td class="td1">Rs.0</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Discount on the Points</td>
+                            <td class="td1">Rs.0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>Rs.0</strong></td>
+                        </tr>
+                    </table>
+                    <div class="buttons">
+                        <button class="normal2">Clear Cart</button>
+
+                        <!-- Add a button for "Proceed to Checkout" -->
+                        <button id="checkoutButton" class="normal1">Proceed to checkout</button>
+
+                        <!-- Hidden form for checkout -->
+                        <div id="checkoutForm" style="display: none;">
+                            <h2>Checkout</h2>
+                            <form id="checkoutFormInner">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required
+                                    placeholder="Enter your name..."><br><br>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required
+                                    placeholder="Enter your email..."><br><br>
+                                <span id="emailError" style="color: red;"></span>
+                                <label for="address">Address:</label>
+                                <textarea id="address" name="address" required
+                                    placeholder="Enter your address..."></textarea><br><br>
+                                <label for="bankAccount">Bank Account Number:</label>
+                                <input type="text" id="bankAccount" name="bankAccount" required
+                                    placeholder="Enter your bank account number..."><br><br>
+                                <button type="submit" id="normal3" class="normal3"
+                                    onclick="validateCheckoutForm()">Complete Checkout</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        </div>
+        </header>
+    </section>
+
+    <!-- <script>
+    // Function to adjust parallax section height based on shopping cart height
+    function adjustParallaxHeight() {
+        var parallaxSection = document.getElementById('parallax-section');
+        var shoppingCartSection = document.getElementById('#cart');
+        var cartAddSection = document.getElementById('cart-add');
+        var shoppingCartHeight = shoppingCartSection.offsetHeight + cartAddSection.offsetHeight;
+        parallaxSection.style.height = shoppingCartHeight + 'px';
+    }
+
+    // Call the function initially and whenever the window is resized
+    adjustParallaxHeight();
+    window.addEventListener('resize', adjustParallaxHeight);
+</script> -->
+
+
+    <footer>
+        <div class="row">
+
+            <div class="col">
+                <a href="mainPage.html"><img src="Images/logo.png" alt="" width="200" height="200"></a>
+            </div>
+
+            <div class="col">
+                <h3><a href="product.html" id="heading">Products</a></h3>
+                <ul>
+                    <li><a href="">Makeup</a></li>
+                    <ul>
+                        <li><a href="">Face</a></li>
+                        <li><a href="">Lips</a></li>
+                        <li><a href="">Eyes</a></li>
+                    </ul>
+                    <li><a href="">Hair</a></li>
+                    <li><a href="">Skincare</a></li>
+                    <li><a href="">Brushs & Tools</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3><a href="VTO.html" id="heading">Services</a></h3>
+                <ul>
+                  <li><a href="VTO.html">Virtual TRY ON</a></li>
+                  <li><a href="#">Treatment</a></li>
+                  <li><a href="#">Shops</a></li>
+                  <li><a href="#">Expert Help</a></li>
+                </ul>
+              </div>
+
+            <div class="col">
+                <h3><a href="Gallery.html">Gallery</a></h3>
+                <h3><a href="QuizPage on template.html">Quiz</a></h3>
+                <h3><a href="Review/Feedback.html">Feedback</a></h3>
+                <h3><a href="PageEditor_Std3.html">Page Editor</a></h3>
+            </div>
+
+            <div class="col">
+                <h3>Find us</h3>
+
+                <li><a href=""><i class="fa fa-facebook-square" style="font-size:36px"></i> <span> Facebook</span> </a>
+                </li>
+                <li><a href=""><i class="fa fa-instagram" style="font-size:36.5px"></i> <span> Instagram</span> </a>
+                </li>
+                <li><a href=""><i class="fa fa-envelope-o" style="font-size:31.2px"></i> <span> Mail</span> </a></li>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+    <script src="Product/Data.js"></script>
+    <script src="Product/Sachith.js"></script>
+</body>
+
+</html>

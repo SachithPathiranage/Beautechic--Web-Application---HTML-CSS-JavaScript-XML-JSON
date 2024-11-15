@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautéchic - Products</title>
+  <link rel="stylesheet" href="Product/stylesproduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="inner_header">
+        <div class="logo">
+          <a href="mainPage.html"><img src="Images/logo.png" alt="logo"></a>
+        </div>
+        <div class="brand">
+          <span>Beautéchic</span>
+        </div>
+        <ul class="head_nav">
+          <a href="product.html">
+            <li><a href="SignUp_Login.html" class="hover-msg1"><img src="Images/Common/user-account-64.png" alt="account"></a></li>
+          </a>
+          <li>
+            <a href="Shopping Cart.html">
+              <div class="shopping_cart">
+
+                <a href="Preloader/Preloader.html"><img src="Images/Common/bag-64.png" alt="bag"></a>
+                <span id="cart_count" class="cart_count">0</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <nav id="nav1">
+      <a href="mainPage.html">Home<span></span></a>
+      <a href="Gallery.html">Gallery<span></span></a>
+      <a href="product.html">Products<span></span></a>
+      <a href="VTO.html">Services<span></span></a>      
+      <a href="QuizPage on template.html">Quiz<span></span></a>
+      <a href="Review/Feedback.html">Feedback<span></span></a>
+      <a href="AboutUs.html">About us<span></span></a>
+    </nav>
+
+    <div class="product-title-background">
+      <div class="product-title">
+        <div class="scale-up-hor-center">
+          <div class="text-pop-up-top">
+            <h1>PRODUCTS</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button for smooth scrolling -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()" title="Go to top">
+      <img src="Images/Main img/UpwardArrow.png" alt="Scroll to top">
+    </button>
+
+
+    <div class="makeup products">
+      <section>
+        <div class="main-product text">
+          <h1>Makeup Products</h1>
+        </div>
+
+        <!-- Row for Lips products  -->
+        <div class="thumbnails-container">
+          <div class="sub-product text">
+            <h3>Lips</h3>
+          </div>
+          <img src="Images/Product_img/left.png" class="prev-btn">
+          <div class="thumbnails-wrapper">
+            <div class="product-row row-lip makeup" id="row-lips">
+              <!-- Thumbnails for lips products here -->
+            </div>
+          </div>
+          <img src="Images/Product_img/right.png" class="next-btn">
+        </div>
+
+        <!-- Row for Face products  -->
+        <div class="thumbnails-container">
+          <div class="sub-product text">
+            <h3>Face</h3>
+          </div>
+          <img src="Images/Product_img/left.png" class="prev-btn">
+          <div class="thumbnails-wrapper">
+            <div class="product-row row-face makeup" id="row-face">
+              <!-- Thumbnails for face products here -->
+            </div>
+          </div>
+          <img src="Images/Product_img/right.png" class="next-btn">
+        </div>
+
+        <!-- Row for Eyes products  -->
+        <div class="thumbnails-container">
+          <div class="sub-product text">
+            <h3>Eyes</h3>
+          </div>
+          <img src="Images/Product_img/left.png" class="prev-btn">
+          <div class="wrapper">
+            <div class="product-row row-eyes makeup" id="row-eyes">
+              <!-- Thumbnails for eyes products here -->
+            </div>
+          </div>
+          <img src="Images/Product_img/right.png" class="next-btn">
+        </div>
+
+        <!-- Row for Cheeks products  -->
+        <div class="thumbnails-container">
+          <div class="sub-product text">
+            <h3>Cheeks</h3>
+          </div>
+          <img src="Images/Product_img/left.png" class="prev-btn">
+          <div class="wrapper">
+            <div class="product-row row-cheeks makeup" id="row-cheeks">
+              <!-- Thumbnails for cheeks products here -->
+            </div>
+          </div>
+          <img src="Images/Product_img/right.png" class="next-btn">
+        </div>
+
+        <!-- Hair Products -->
+        <section class="Hair products">
+          <div class="main-product text">
+            <h1><b>Hair Products</b></h1>
+          </div>
+
+          <div class="thumbnails-container">
+            <img src="Images/Product_img/left.png" class="prev-btn">
+            <div class="wrapper">
+              <div class="product-row row-hair products" id="row-hair">
+                <!-- Thumbnails for Hair products here -->
+              </div>
+            </div>
+            <img src="Images/Product_img/right.png" class="next-btn">
+          </div>
+        </section>
+
+        <section class="Tools & Brushes">
+          <div class="main-product text">
+            <h1><b>Tools & Brushes</b></h1>
+          </div>
+
+
+          <div class="thumbnails-container">
+            <img src="Images/Product_img/left.png" class="prev-btn">
+            <div class="wrapper">
+              <div class="product-row row-tools products" id="row-tools">
+                <!-- Thumbnails for Tools & Brushes products here -->
+              </div>
+            </div>
+            <img src="Images/Product_img/right.png" class="next-btn">
+          </div>
+        </section>
+        </br>
+
+        <footer>
+          <div class="row">
+            <div class="col">
+              <a href="mainPage.html"><img src="Images/logo.png" alt="" width="200" height="200"></a>
+            </div>
+            <div class="col">
+              <h3><a href="product.html" id="heading">Products</a></h3>
+              <ul>
+                <li><a href="">Makeup</a></li>
+                <ul>
+                  <li><a href="">Face</a></li>
+                  <li><a href="">Lips</a></li>
+                  <li><a href="">Eyes</a></li>
+                </ul>
+                <li><a href="">Hair</a></li>
+                <li><a href="">Skincare</a></li>
+                <li><a href="">Brushes & Tools</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3><a href="VTO.html" id="heading">Services</a></h3>
+              <ul>
+                <li><a href="VTO.html">Virtual TRY ON</a></li>
+                <li><a href="#">Treatment</a></li>
+                <li><a href="#">Shops</a></li>
+                <li><a href="#">Expert Help</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3><a href="Gallery.html">Gallery</a></h3>
+              <h3><a href="QuizPage on template.html">Quiz</a></h3>
+              <h3><a href="Review/Feedback.html">Feedback</a></h3>
+              <h3><a href="PageEditor_Std3.html">Page Editor</a></h3>
+          </div>
+            <div class="col">
+              <h3>Find us</h3>
+              <li><a href=""><i class="fa fa-facebook-square" style="font-size:36px"><span> Facebook</span></i></a></li>
+              <li><a href=""><i class="fa fa-instagram" style="font-size:36.5px"></i><span> Instagram</span></a></li>
+              <li><a href=""><i class="fa fa-envelope-o" style="font-size:31.2px"></i><span> Mail</span></a></li>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <script src="Product/Data.js"></script>
+    <script src="Product/product_script.js"></script>
+</body>
+
+</html>
+
+<!-- <div class="container">
+    <h2>Buy Products</h2>
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="tel">Telephone:</label>
+        <input type="tel" id="tel" name="tel">
+      </div>
+      <div class="form-group">
+        <label for="points">Points:</label>
+        <input type="number" id="points" name="points" min="0">
+      </div>
+      <button type="button" id="placeOrderBtn">Place Order</button>
+    </form>
+    <div id="orderSummary" style="display: none;"></div>
+  </div>
+  <script src="script.js"></script> -->

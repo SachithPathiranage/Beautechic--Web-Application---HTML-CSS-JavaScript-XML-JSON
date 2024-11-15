@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    
+    <link rel="stylesheet" href="Account/Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="inner_header">
+            <div class="logo">
+                <a href="mainPage.html"><img src="Images/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="brand">
+                <Span>Beautéchic</Span>
+            </div>
+            <div class="head_nav">
+            <ul>
+                <li><a href="SignUp_Login.html"><img src="Images/Common/user-account-64.png" alt="account"></a></li>
+                <li><a href="Shopping Cart.html"><img src="Images/Common/bag-64.png" alt="bag"></a></li>
+            </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container" id="container">
+        
+        <div class="form-container sign-up">
+            <form id="signup-form">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" id="name">
+                <input type="text" placeholder="Email" id="email">
+                <input type="password" placeholder="Password" id="password"> 
+                <button id="signup-button">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password" id="password">
+                <a href="#">Forget Your Password?</a>
+                <button id="signin-button">Sign In</button>
+            </form>
+        </div>
+        
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use <br>all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use <br>all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="login.js"></script>
+     
+    <footer>       
+        <div class="row">
+            
+            <div class="col">
+                <a href="mainPage.html"><img src="Images/logo.png" alt="" width="200" height="200"></a>
+            </div>
+
+            <div class="col">
+                <h3><a href="product.html" id="heading">Products</a></h3>
+                <ul>
+                    <li><a href="">Makeup</a></li>
+                    <ul>
+                        <li><a href="">Face</a></li>
+                        <li><a href="">Lips</a></li>
+                        <li><a href="">Eyes</a></li>
+                    </ul>
+                    <li><a href="">Hair</a></li>
+                    <li><a href="">Skincare</a></li>
+                    <li><a href="">Brushs & Tools</a></li>
+                </ul>
+            </div>
+            
+            <div class="col">
+                <h3><a href="VTO.html" id="heading">Services</a></h3>
+                <ul>
+                  <li><a href="VTO.html">Virtual TRY ON</a></li>
+                  <li><a href="#">Treatment</a></li>
+                  <li><a href="#">Shops</a></li>
+                  <li><a href="#">Expert Help</a></li>
+                </ul>
+              </div>
+            
+            <div class="col">
+                <h3><a href="Gallery.html">Gallery</a></h3>
+                <h3><a href="QuizPage on template.html">Quiz</a></h3>
+                <h3><a href="Review/Feedback.html">Feedback</a></h3>
+                <h3><a href="PageEditor_Std1.html">Page Editor</a></h3>
+            </div>
+            
+            <div class="col">
+                <h3>Find us</h3>
+
+                <li><a href=""><i class="fa fa-facebook-square" style="font-size:36px"></i> <span> Facebook</span> </a></li>
+                <li><a href=""><i class="fa fa-instagram" style="font-size:36.5px"></i> <span> Instagram</span> </a></li>
+                <li><a href=""><i class="fa fa-envelope-o" style="font-size:31.2px"></i> <span> Mail</span> </a></li>
+            </div>
+            </div>
+        
+        </div>
+    </footer>
+    
+    <script src="Account\login.js"></script>
+    <script src="Account\Validation.js"></script>
+
+</body>
+
+</html>
