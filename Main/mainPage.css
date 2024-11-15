@@ -1,0 +1,893 @@
+@font-face {
+    font-family: BeautifulPeople;
+    src: url('../Font/BeautifulPeople.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Just Believe;
+    src: url('../Font/Just Believe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Fashion;
+    src: url('../Font/Fashion.ttf') format('truetype');
+}
+
+* {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    height: auto !important;
+    background-color: #ffd3ebdf;
+    /*overflow-y: auto;*/
+    /*overflow-x: auto;*/
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(235, 221, 186), rgba(154, 118, 70, 0.873));
+    /* Adjust the opacity of the fade-out effect */
+}
+
+.clouds {
+    z-index: 1;
+}
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 100%;
+    display: table;
+    margin-right: 10px;
+    padding: 0;
+}
+.logo img {
+    height: 100px;
+    width: 100px;
+}
+
+.product-title-background {
+    background-image: url('../Images/Main img/products.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+}
+
+.background-text h1 {
+    position: relative;
+    top: 200px;
+    left: 40px;
+    color: #000000;
+    font-size: 50px;
+    font-family: 'Fashion', sans-serif;
+    text-wrap: nowrap;
+    color: #392101;
+    text-decoration: wavy;
+    background-color: cornsilk;
+    width: 1150px;
+
+}
+
+.background-text h2 {
+    position: relative;
+    top: 200px;
+    left: 40px;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Fashion', sans-serif;
+    text-wrap: nowrap;
+
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    /* Adjust the height of the fading effect */
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 207, 207, 0.404), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container::after {
+    top: auto;
+    bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255));
+}
+
+.brand {
+    margin-left: 145px;
+    font-size: 55px;
+    font-weight: 100;
+    font-family: BeautifulPeople, cursive;
+}
+
+.header2 {
+    color: hsl(0, 0%, 100%);
+    height: 50px;
+    background-image: url('../Images/Main img/pexels-fwstudio-132192.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header3 {
+    color: hsl(0, 60%, 42%);
+    height: 80px;
+    z-index: 1;
+}
+
+#header_text {
+    position: relative;
+    padding-left: 10px;
+    top: 0%;
+    font-size: 50px;
+    font-weight: 100;
+    font-family: Just Believe;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(to bottom, rgb(235, 221, 186), rgb(255, 255, 255));
+    /* Adjust the opacity of the fade-out effect */
+    color: linear-gradient(to bottom, rgb(235, 221, 186), rgb(255, 255, 255));
+    text-wrap: nowrap;
+}
+
+.product-title-background1 {
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    /* Hide overflowing video */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the video covers the entire container */
+}
+
+.background-text1 {
+    margin-right: 0%;
+}
+
+.background-text1 h1 {
+    position: relative;
+    top: 500px;
+    left: 250px;
+    color: #000000;
+    font-size: 50px;
+    font-family: 'Fashion', sans-serif;
+    text-wrap: nowrap;
+    color: #392101;
+    text-decoration: wavy;
+    background-color: rgba(255, 248, 220);
+    width: 1250px;
+    z-index: 2;
+}
+
+.background-text1 h2 {
+    position: relative;
+    top: 500px;
+    left: 250px;
+    right: 0%;
+    color: #000000;
+    background-color: rgba(255, 248, 220);
+    padding: 10px;
+    width: 810px;
+    font-size: 20px;
+    font-family: 'Fashion', sans-serif;
+    text-wrap: nowrap;
+    z-index: 2;
+
+}
+
+.button1 {
+    font-size: large;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 210px;
+    left: 80px;
+    background-color: #ffffff;
+    align-content: center;
+    padding: 15px;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #000;
+    z-index: 2;
+}
+
+.button2 {
+    font-size: large;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 525px;
+    left: 275px;
+    background-color: #ffffff;
+    align-content: center;
+    padding: 15px;
+    border: 0;
+    border-radius: 20px;
+    border-color: #000;
+    cursor: pointer;
+    color: #000;
+    z-index: 2;
+
+}
+
+.button1:hover{
+    background-color: #0b917d;
+    border: #000;
+    border-color: aqua;
+    color: #fff;
+    transition:all 0.5s;
+}
+
+.button2:hover{
+    background-color: #0b917d;
+    border: #000;
+    border-color: aqua;
+    color: #fff;
+    transition:all 0.5s;
+
+}
+
+
+.head_nav {
+    float: right;
+    height: 100%;
+}
+
+.head_nav li {
+    float: left;
+    padding: 8px 10px;
+    display: table;
+    height: 100%;
+}
+
+.head_nav li a {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.head_nav li:last-child {
+    padding-right: 0;
+}
+
+.head_nav li a:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.hover-msg1:hover::before {
+    position: fixed;
+    content: "Log-In / Sign-Up";
+    padding-top: 65px;
+    color: #000;
+    font-weight: 600;
+}
+
+.head_nav li:last-child .shopping_cart {
+    position: relative;
+}
+
+.head_nav li:last-child .shopping_cart .cart_count {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: red;
+    display: flex;
+    width: 20px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.shopping_cart:hover::before {
+    position: fixed;
+    content: "Shopping Cart";
+    padding-top: 68px;
+    color: #000;
+    font-weight: 600;
+
+}
+
+/* Nav */
+
+nav {
+    width: 100% !important;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    background-color: #181515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 45px;
+}
+
+#nav1 a:hover {
+    position: static;
+    color: #ffffff;
+    background-color: #0b917d;
+    transition: all 0.3s;
+    outline: #0b917d solid 1px;
+    opacity: 1;
+}
+
+section {
+    z-index: 1;
+}
+
+.header_near_footer {
+    height: 0px !important;
+}
+
+
+/* Footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, rgb(12, 12, 12), rgb(0, 0, 0));
+    padding: 0 20px;
+}
+
+footer.visible+section {
+    margin-bottom: 100px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.col {
+    padding: 25px;
+    color: #fff;
+}
+
+.col li {
+    list-style: none;
+}
+
+.col a {
+    color: #fff;
+}
+
+.col a span {
+    font-size: large;
+}
+
+.tracking-in-expand-fwd {
+    -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px);
+        transform: translateZ(-700px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+
+.kenburns-top {
+    -webkit-animation: kenburns-top 5s ease-out both;
+    animation: kenburns-top 5s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+@keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+
+/*----------------------------------------------------*/
+
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    width: calc(min(90rem, 90%));
+    margin: 0 auto;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
+    height: 100vh;
+    z-index: 2;
+}
+
+.bg {
+    position: absolute;
+    top: -4rem;
+    left: -12rem;
+    z-index: -1;
+    opacity: 0;
+}
+
+.bg1 {
+    position: absolute;
+    top: 20rem;
+    right: 30px;
+    z-index: 2;
+    opacity: 0;
+    width: 350px;
+    top: 850px;
+}
+
+.bgcontainer{
+    position: relative;
+    justify-content: center;
+}
+
+.bg3 {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    opacity: 0;
+    width: 750px;
+    top: -80px;
+}
+
+.bg4 {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    width: 350px;
+    left: -10px;
+    top: 850px;
+}
+
+.bg2 {
+    position: absolute;
+    bottom: 1rem;
+    right: 0%;
+    z-index: -2;
+    width: 15rem;
+    opacity: 0;
+}
+
+
+main>div span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: #717171;
+}
+
+main>div h1 {
+    text-transform: capitalize;
+    font-family: Just Believe;
+    font-weight: 1000;
+    font-size: clamp(4.4375rem, 3.25rem + 0.75vw, 5rem);
+    background-color: #005baa;
+    background-image: linear-gradient(45deg, #005baa, #000000);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+main>div hr {
+    display: block;
+    background: #005baa;
+    height: 0.25rem;
+    width: 20rem;
+    border: none;
+    margin: 1.125rem 0 1.875rem 0;
+}
+
+main>div p {
+    width: 500px;
+    line-height: 1.6;
+}
+
+main a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 3.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+main>div>a {
+    border: 2px solid #c2c2c2;
+    margin-top: 2.188rem;
+    padding: 0.625rem 1.875rem;
+}
+
+main>div>a:hover {
+    border: 0.125rem solid #005baa;
+    color: #005baa;
+}
+
+.body-slider {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-container {
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.swiper-item {
+    height: 200px;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 330px;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: auto;
+}
+
+.swiper-item-1 {
+    left: 15%;
+    opacity: 0.4;
+    transform: translateX(-50%);
+}
+
+.swiper-item-2,
+.swiper-item-4 {
+    height: 250px;
+    opacity: 0.8;
+    width: 380px;
+    z-index: 1;
+}
+
+.swiper-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.swiper-item-3 {
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    z-index: 2;
+}
+
+.swiper-item-4 {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.swiper-item-5 {
+    opacity: 0.4;
+    left: 85%;
+    transform: translateX(-50%);
+}
+
+.swiper-controls {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+}
+
+.swiper-controls.button {
+    background-color: transparent !important;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 50px;
+    padding: 0 12px;
+    text-transform: capitalize;
+}
+
+.swiper-controls button:focus {
+    outline: none;
+}
+
+.swiper-controls.previous {
+    position: relative;
+}
+
+.swiper-controls.previous::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: "";
+    display: inline-block;
+    height: 5px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+    left: -30px;
+    padding: 10px;
+}
+
+.swiper-controls.previous:hover::before {
+    left: -40px;
+}
+
+.swiper-controls.next {
+    position: relative;
+}
+
+.swiper-controls.next::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: "";
+    display: inline-block;
+    height: 5px;
+    position: absolute;
+    top: 45;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    right: -30px;
+    padding: 10px;
+    width: 5px;
+}
+
+.swiper-controls.next:hover:before {
+    right: -40px;
+}
+
+.swiper-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none !important;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.swiper nav li {
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.swiper-nav li .swiper-item-selected {
+    background: #555;
+}
+
+/* Styles for the previous button */
+.swiper-controls-previous {
+    position: absolute;
+    right: 400px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    /* Background color of the button */
+    color: #000;
+    /* Text color of the button */
+    border: 1px solid #000;
+    /* Border color and thickness */
+    padding: 10px 10px;
+    /* Padding inside the button */
+    border-radius: 5px;
+    /* Border radius to round the corners */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    z-index: 2;
+    /* Ensure the button is above the carousel */
+}
+
+/* Styles for the next button */
+.swiper-controls-next {
+    position: absolute;
+    right: 250px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    /* Background color of the button */
+    color: #000;
+    /* Text color of the button */
+    border: 1px solid #000;
+    /* Border color and thickness */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border-radius: 5px;
+    /* Border radius to round the corners */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    z-index: 2;
+    /* Ensure the button is above the carousel */
+}
+
+/* Styles for the previous button on hover */
+.swiper-controls-previous:hover {
+    background-color: #0b917d;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+/* Styles for the next button on hover */
+.swiper-controls-next:hover {
+    background-color: #0b917d;
+    /* Change background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.description {
+    display: none;
+    /* Hide all descriptions by default */
+    position: absolute;
+    top: 475px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Black background with opacity */
+    color: #fff;
+    /* White text */
+    text-align: center;
+    /* Centered text/links */
+    padding: 20px;
+    /* Some padding */
+    transition: opacity 0.5s ease;
+    /* 0.5 second transition effect to slide in or slide down the descriptions */
+}
+
+.description.active {
+    display: block;
+    /* Display the active description */
+}
+
+
+@media screen and (min-width: 48rem) {
+    main {
+        display: flex;
+        align-items: center;
+    }
+
+    .bg,
+    .bg1,
+    .bg2,
+    .bg3,
+    .bg4 {
+        opacity: 0.1;
+    }
+}
+
+/* Style for scroll-to-top button */
+.scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .scroll-to-top-btn img {
+    width: 20px; /* Adjust image size as needed */
+    height: 15px;
+  }
+  
+  .scroll-to-top-btn:hover {
+    background-color: #0056b3;
+  }
+  
